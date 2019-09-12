@@ -1,0 +1,4356 @@
+use cuda
+USE_TENSORBOARD:  True
+heads {'hm': 16}
+util2==> initializing 3D train data.
+Loaded 3D train 312188 samples
+util2==> initializing 3D val data.
+Loaded 3D val 2874 samples
+39024
+/home/ai/anaconda3/envs/mask/lib/python3.5/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+THCudaCheck FAIL file=/pytorch/aten/src/THC/THCTensorMathCompare.cuh line=82 error=59 : device-side assert triggered
+/pytorch/aten/src/THCUNN/ClassNLLCriterion.cu:105: void cunn_ClassNLLCriterion_updateOutput_kernel(Dtype *, Dtype *, Dtype *, long *, Dtype *, int, int, int, int, long) [with Dtype = float, Acctype = float]: block: [0,0,0], thread: [0,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/THCUNN/ClassNLLCriterion.cu:105: void cunn_ClassNLLCriterion_updateOutput_kernel(Dtype *, Dtype *, Dtype *, long *, Dtype *, int, int, int, int, long) [with Dtype = float, Acctype = float]: block: [0,0,0], thread: [1,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/THCUNN/ClassNLLCriterion.cu:105: void cunn_ClassNLLCriterion_updateOutput_kernel(Dtype *, Dtype *, Dtype *, long *, Dtype *, int, int, int, int, long) [with Dtype = float, Acctype = float]: block: [0,0,0], thread: [2,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/THCUNN/ClassNLLCriterion.cu:105: void cunn_ClassNLLCriterion_updateOutput_kernel(Dtype *, Dtype *, Dtype *, long *, Dtype *, int, int, int, int, long) [with Dtype = float, Acctype = float]: block: [0,0,0], thread: [3,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/THCUNN/ClassNLLCriterion.cu:105: void cunn_ClassNLLCriterion_updateOutput_kernel(Dtype *, Dtype *, Dtype *, long *, Dtype *, int, int, int, int, long) [with Dtype = float, Acctype = float]: block: [0,0,0], thread: [4,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/THCUNN/ClassNLLCriterion.cu:105: void cunn_ClassNLLCriterion_updateOutput_kernel(Dtype *, Dtype *, Dtype *, long *, Dtype *, int, int, int, int, long) [with Dtype = float, Acctype = float]: block: [0,0,0], thread: [5,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/THCUNN/ClassNLLCriterion.cu:105: void cunn_ClassNLLCriterion_updateOutput_kernel(Dtype *, Dtype *, Dtype *, long *, Dtype *, int, int, int, int, long) [with Dtype = float, Acctype = float]: block: [0,0,0], thread: [6,0,0] Assertion `t >= 0 && t < n_classes` failed.
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([43])
+the 1 size of 3d and t is  torch.Size([43, 4096]) torch.Size([43])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+output are  --- {'loss_keypoint3d': tensor(-0., device='cuda:0', grad_fn=<MulBackward0>), 'loss_rpn_box_reg': tensor(0.0066, device='cuda:0', grad_fn=<DivBackward0>), 'loss_objectness': tensor(0.6960, device='cuda:0', grad_fn=<BinaryCrossEntropyWithLogitsBackward>), 'loss_classifier': tensor(0.6496, device='cuda:0', grad_fn=<NllLossBackward>), 'loss_keypoint': tensor(8.3375, device='cuda:0', grad_fn=<NllLossBackward>), 'loss_box_reg': tensor(0.0229, device='cuda:0', grad_fn=<DivBackward0>)}
+the current logs epoch: 00 iters:00/39024 loss: 00inf
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+output are  --- {'loss_keypoint3d': tensor(-0., device='cuda:0', grad_fn=<MulBackward0>), 'loss_rpn_box_reg': tensor(0.0805, device='cuda:0', grad_fn=<DivBackward0>), 'loss_objectness': tensor(0.1233, device='cuda:0', grad_fn=<BinaryCrossEntropyWithLogitsBackward>), 'loss_classifier': tensor(1.6831, device='cuda:0', grad_fn=<NllLossBackward>), 'loss_keypoint': tensor(-0., device='cuda:0', grad_fn=<MulBackward0>), 'loss_box_reg': tensor(0.1641, device='cuda:0', grad_fn=<DivBackward0>)}
+the current logs epoch: 00 iters:01/39024 loss: 2.050961
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+output are  --- {'loss_keypoint3d': tensor(-0., device='cuda:0', grad_fn=<MulBackward0>), 'loss_rpn_box_reg': tensor(0.0176, device='cuda:0', grad_fn=<DivBackward0>), 'loss_objectness': tensor(2.4474, device='cuda:0', grad_fn=<BinaryCrossEntropyWithLogitsBackward>), 'loss_classifier': tensor(1.0323, device='cuda:0', grad_fn=<NllLossBackward>), 'loss_keypoint': tensor(-0., device='cuda:0', grad_fn=<MulBackward0>), 'loss_box_reg': tensor(0.0784, device='cuda:0', grad_fn=<DivBackward0>)}
+the current logs epoch: 00 iters:02/39024 loss: 1.787825
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([30])
+the 1 size of 3d and t is  torch.Size([30, 4096]) torch.Size([30])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+output are  --- {'loss_keypoint3d': tensor(-0., device='cuda:0', grad_fn=<MulBackward0>), 'loss_rpn_box_reg': tensor(0.0079, device='cuda:0', grad_fn=<DivBackward0>), 'loss_objectness': tensor(0.4796, device='cuda:0', grad_fn=<BinaryCrossEntropyWithLogitsBackward>), 'loss_classifier': tensor(0.1948, device='cuda:0', grad_fn=<NllLossBackward>), 'loss_keypoint': tensor(195.6120, device='cuda:0', grad_fn=<NllLossBackward>), 'loss_box_reg': tensor(0.2079, device='cuda:0', grad_fn=<DivBackward0>)}
+the current logs epoch: 00 iters:03/39024 loss: 65.500740
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([153])
+the 1 size of 3d and t is  torch.Size([153, 4096]) torch.Size([153])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+output are  --- {'loss_keypoint3d': tensor(-0., device='cuda:0', grad_fn=<MulBackward0>), 'loss_rpn_box_reg': tensor(0.0042, device='cuda:0', grad_fn=<DivBackward0>), 'loss_objectness': tensor(0.5162, device='cuda:0', grad_fn=<BinaryCrossEntropyWithLogitsBackward>), 'loss_classifier': tensor(0.3387, device='cuda:0', grad_fn=<NllLossBackward>), 'loss_keypoint': tensor(15.1871, device='cuda:0', grad_fn=<NllLossBackward>), 'loss_box_reg': tensor(0.4932, device='cuda:0', grad_fn=<DivBackward0>)}
+the current logs epoch: 00 iters:04/39024 loss: 4.134830
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([47])
+the 1 size of 3d and t is  torch.Size([47, 4096]) torch.Size([47])
+the model has depth 
+the 3d loss valid is  torch.Size([7])
+the  3 size of 3d and t is  torch.Size([7, 4096]) torch.Size([7])
+keypoint3d_logits---- Traceback (most recent call last):
+  File "main.py", line 93, in <module>
+    main(opt)
+  File "main.py", line 75, in main
+    loss, log_dict_train = train_3d(epoch, opt, train_loader, model, optimizer)
+  File "/data/ai/xxy/mask_rcnn/maskrcnn_3d/models/detection/train_mask2.py", line 143, in train_3d
+    return step('train', epoch, opt, train_loader, model, optimizer)
+  File "/data/ai/xxy/mask_rcnn/maskrcnn_3d/models/detection/train_mask2.py", line 60, in step
+    output = model(image, batch_post)
+  File "/home/ai/anaconda3/envs/mask/lib/python3.5/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/ai/xxy/mask_rcnn/maskrcnn_3d/models/detection/generalized_rcnn.py", line 52, in forward
+    detections, detector_losses = self.roi_heads(features, proposals, images.image_sizes, targets)
+  File "/home/ai/anaconda3/envs/mask/lib/python3.5/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/ai/xxy/mask_rcnn/maskrcnn_3d/models/detection/roi_heads.py", line 804, in forward
+    gt_keypoints3d,pos_matched_idxs)
+  File "/data/ai/xxy/mask_rcnn/maskrcnn_3d/models/detection/roi_heads.py", line 362, in keypointrcnn3d_loss
+    print("keypoint3d_logits----",keypoint3d_logits)
+  File "/home/ai/anaconda3/envs/mask/lib/python3.5/site-packages/torch/tensor.py", line 71, in __repr__
+    return torch._tensor_str._str(self)
+  File "/home/ai/anaconda3/envs/mask/lib/python3.5/site-packages/torch/_tensor_str.py", line 286, in _str
+    tensor_str = _tensor_str(self, indent)
+  File "/home/ai/anaconda3/envs/mask/lib/python3.5/site-packages/torch/_tensor_str.py", line 201, in _tensor_str
+    formatter = _Formatter(get_summarized_data(self) if summarize else self)
+  File "/home/ai/anaconda3/envs/mask/lib/python3.5/site-packages/torch/_tensor_str.py", line 87, in __init__
+    nonzero_finite_vals = torch.masked_select(tensor_view, torch.isfinite(tensor_view) & tensor_view.ne(0))
+  File "/home/ai/anaconda3/envs/mask/lib/python3.5/site-packages/torch/functional.py", line 237, in isfinite
+    return (tensor == tensor) & (tensor.abs() != inf)
+RuntimeError: cuda runtime error (59) : device-side assert triggered at /pytorch/aten/src/THC/THCTensorMathCompare.cuh:82
+use cuda
+USE_TENSORBOARD:  True
+heads {'hm': 16}
+util2==> initializing 3D train data.
+Loaded 3D train 3000 samples
+util2==> initializing 3D val data.
+Loaded 3D val 2874 samples
+375
+/home/ai/anaconda3/envs/mask/lib/python3.5/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:00/375 loss: 00inf
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:01/375 loss: 8.060006
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:02/375 loss: 5.800260
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([8])
+the 1 size of 3d and t is  torch.Size([8, 4096]) torch.Size([8])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:03/375 loss: 4.763194
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:04/375 loss: 0.345051
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:05/375 loss: 0.099531
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:06/375 loss: 0.272858
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([7])
+the 1 size of 3d and t is  torch.Size([7, 4096]) torch.Size([7])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:07/375 loss: 228.388611
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:08/375 loss: 0.091362
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:09/375 loss: 0.071681
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:10/375 loss: 0.160096
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:11/375 loss: 0.103069
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:12/375 loss: 0.235537
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([30])
+the 1 size of 3d and t is  torch.Size([30, 4096]) torch.Size([30])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:13/375 loss: 3.265020
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:14/375 loss: 0.029010
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:15/375 loss: 0.028194
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([33])
+the 1 size of 3d and t is  torch.Size([33, 4096]) torch.Size([33])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:16/375 loss: 0.580924
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:17/375 loss: 0.036501
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([15])
+the 1 size of 3d and t is  torch.Size([15, 4096]) torch.Size([15])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:18/375 loss: 0.493782
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([12])
+the 1 size of 3d and t is  torch.Size([12, 4096]) torch.Size([12])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:19/375 loss: 0.481186
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:20/375 loss: 0.037733
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:21/375 loss: 0.068823
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([12])
+the 1 size of 3d and t is  torch.Size([12, 4096]) torch.Size([12])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:22/375 loss: 0.392328
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:23/375 loss: 0.032177
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([6])
+the 1 size of 3d and t is  torch.Size([6, 4096]) torch.Size([6])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:24/375 loss: 0.237662
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([19])
+the 1 size of 3d and t is  torch.Size([19, 4096]) torch.Size([19])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:25/375 loss: 0.599672
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([9])
+the 1 size of 3d and t is  torch.Size([9, 4096]) torch.Size([9])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:26/375 loss: 0.330935
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:27/375 loss: 0.008522
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([13])
+the 1 size of 3d and t is  torch.Size([13, 4096]) torch.Size([13])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:28/375 loss: 0.300366
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([24])
+the 1 size of 3d and t is  torch.Size([24, 4096]) torch.Size([24])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:29/375 loss: 0.273170
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:30/375 loss: 0.027818
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:31/375 loss: 0.128931
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:32/375 loss: 0.081345
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:33/375 loss: 0.091011
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:34/375 loss: 0.092434
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:35/375 loss: 0.074573
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:36/375 loss: 0.045433
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:37/375 loss: 0.130387
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([36])
+the 1 size of 3d and t is  torch.Size([36, 4096]) torch.Size([36])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:38/375 loss: 2.194802
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:39/375 loss: 0.110515
+torch.Size([8, 3, 256, 256])THCudaCheck FAIL file=/pytorch/aten/src/THC/generic/THCTensorMath.cu line=26 error=59 : device-side assert triggered
+/pytorch/aten/src/THCUNN/ClassNLLCriterion.cu:105: void cunn_ClassNLLCriterion_updateOutput_kernel(Dtype *, Dtype *, Dtype *, long *, Dtype *, int, int, int, int, long) [with Dtype = float, Acctype = float]: block: [0,0,0], thread: [0,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/THCUNN/ClassNLLCriterion.cu:105: void cunn_ClassNLLCriterion_updateOutput_kernel(Dtype *, Dtype *, Dtype *, long *, Dtype *, int, int, int, int, long) [with Dtype = float, Acctype = float]: block: [0,0,0], thread: [1,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/THCUNN/ClassNLLCriterion.cu:105: void cunn_ClassNLLCriterion_updateOutput_kernel(Dtype *, Dtype *, Dtype *, long *, Dtype *, int, int, int, int, long) [with Dtype = float, Acctype = float]: block: [0,0,0], thread: [2,0,0] Assertion `t >= 0 && t < n_classes` failed.
+
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:40/375 loss: 0.185344
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:41/375 loss: 0.245595
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:42/375 loss: 0.265328
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:43/375 loss: 0.319698
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:44/375 loss: 0.204311
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([28])
+the 1 size of 3d and t is  torch.Size([28, 4096]) torch.Size([28])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:45/375 loss: 0.422048
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([3])
+the  3 size of 3d and t is  torch.Size([3, 4096]) torch.Size([3])
+the keypoint3d_targets is  tensor([6010.3711, 6010.3711, 6010.3711], device='cuda:0')
+Traceback (most recent call last):
+  File "main.py", line 93, in <module>
+    main(opt)
+  File "main.py", line 75, in main
+    loss, log_dict_train = train_3d(epoch, opt, train_loader, model, optimizer)
+  File "/data/ai/xxy/mask_rcnn/maskrcnn_3d/models/detection/train_mask2.py", line 143, in train_3d
+    return step('train', epoch, opt, train_loader, model, optimizer)
+  File "/data/ai/xxy/mask_rcnn/maskrcnn_3d/models/detection/train_mask2.py", line 73, in step
+    optimizer.zero_grad()
+  File "/home/ai/anaconda3/envs/mask/lib/python3.5/site-packages/torch/optim/optimizer.py", line 164, in zero_grad
+    p.grad.zero_()
+RuntimeError: cuda runtime error (59) : device-side assert triggered at /pytorch/aten/src/THC/generic/THCTensorMath.cu:26
+use cuda
+USE_TENSORBOARD:  True
+heads {'hm': 16}
+util2==> initializing 3D train data.
+Loaded 3D train 3000 samples
+util2==> initializing 3D val data.
+Loaded 3D val 2874 samples
+375
+/home/ai/anaconda3/envs/mask/lib/python3.5/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:00/375 loss: 00inf
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:01/375 loss: 82.041306
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:02/375 loss: 11.911651
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:03/375 loss: 1.095204
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:04/375 loss: 0.234141
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:05/375 loss: 1.875997
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:06/375 loss: 0.611260
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:07/375 loss: 0.137150
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:08/375 loss: 0.147972
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:09/375 loss: 0.131293
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:10/375 loss: 0.144313
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:11/375 loss: 0.245614
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:12/375 loss: 0.208940
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([60])
+the 1 size of 3d and t is  torch.Size([60, 4096]) torch.Size([60])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:13/375 loss: 0.835832
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([12])
+the 1 size of 3d and t is  torch.Size([12, 4096]) torch.Size([12])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:14/375 loss: 0.591841
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:15/375 loss: 0.037692
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:16/375 loss: 0.029259
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:17/375 loss: 0.029192
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:18/375 loss: 0.033073
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:19/375 loss: 0.024553
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:20/375 loss: 0.023556
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:21/375 loss: 0.022424
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([2])
+the 1 size of 3d and t is  torch.Size([2, 4096]) torch.Size([2])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:22/375 loss: 55.758675
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:23/375 loss: 0.055023
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([2])
+the 1 size of 3d and t is  torch.Size([2, 4096]) torch.Size([2])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:24/375 loss: 1118.081421
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:25/375 loss: 0.073991
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:26/375 loss: 0.104791
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:27/375 loss: 0.102194
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([2])
+the 1 size of 3d and t is  torch.Size([2, 4096]) torch.Size([2])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:28/375 loss: 1.024927
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:29/375 loss: 0.274171
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:30/375 loss: 0.226999
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:31/375 loss: 0.355122
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:32/375 loss: 0.214804
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:33/375 loss: 0.127918
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:34/375 loss: 0.172120
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:35/375 loss: 0.083863
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:36/375 loss: 0.096348
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:37/375 loss: 0.240365
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([3])
+the 1 size of 3d and t is  torch.Size([3, 4096]) torch.Size([3])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:38/375 loss: 9.594557
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:39/375 loss: 0.621434
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:40/375 loss: 1.110845
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:41/375 loss: 0.571373
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:42/375 loss: 1.073200
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:43/375 loss: 0.581122
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:44/375 loss: 0.519630
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:45/375 loss: 0.255496
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:46/375 loss: 0.128739
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:47/375 loss: 0.315513
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:48/375 loss: 0.021052
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:49/375 loss: 0.036271
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:50/375 loss: 0.027812
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([2])
+the 1 size of 3d and t is  torch.Size([2, 4096]) torch.Size([2])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:51/375 loss: 6.188671
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:52/375 loss: 0.074426
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:53/375 loss: 0.224955
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:54/375 loss: 0.150178
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:55/375 loss: 0.162388
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:56/375 loss: 0.324791
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:57/375 loss: 0.334336
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:58/375 loss: 0.867785
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:59/375 loss: 0.155212
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:60/375 loss: 0.134201
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:61/375 loss: 0.371281
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:62/375 loss: 0.081866
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:63/375 loss: 0.085416
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:64/375 loss: 0.216858
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:65/375 loss: 0.170462
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:66/375 loss: 0.019543
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:67/375 loss: 0.027309
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:68/375 loss: 0.021956
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:69/375 loss: 0.042138
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:70/375 loss: 0.127714
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([3])
+the 1 size of 3d and t is  torch.Size([3, 4096]) torch.Size([3])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:71/375 loss: 17.228773
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:72/375 loss: 0.200215
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:73/375 loss: 0.355796
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:74/375 loss: 1.608613
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:75/375 loss: 0.344268
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:76/375 loss: 0.420446
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:77/375 loss: 0.414603
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:78/375 loss: 0.365523
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:79/375 loss: 0.470902
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:80/375 loss: 0.039143
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:81/375 loss: 0.106977
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([10])
+the 1 size of 3d and t is  torch.Size([10, 4096]) torch.Size([10])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:82/375 loss: 1.000766
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:83/375 loss: 0.017359
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:84/375 loss: 0.153958
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:85/375 loss: 0.086770
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:86/375 loss: 0.064200
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:87/375 loss: 0.041488
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:88/375 loss: 0.091869
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:89/375 loss: 0.050585
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:90/375 loss: 0.044662
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([12])
+the 1 size of 3d and t is  torch.Size([12, 4096]) torch.Size([12])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:91/375 loss: 72.098824
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:92/375 loss: 0.049425
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:93/375 loss: 0.250277
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([34])
+the 1 size of 3d and t is  torch.Size([34, 4096]) torch.Size([34])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:94/375 loss: 0.525118
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:95/375 loss: 0.169037
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([5])
+the 1 size of 3d and t is  torch.Size([5, 4096]) torch.Size([5])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:96/375 loss: 0.153867
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:97/375 loss: 0.198264
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:98/375 loss: 0.191375
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:99/375 loss: 0.259053
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:100/375 loss: 0.276969
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:101/375 loss: 0.076947
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:102/375 loss: 0.181795
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:103/375 loss: 0.097227
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:104/375 loss: 0.060511
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:105/375 loss: 0.137232
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:106/375 loss: 0.054953
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:107/375 loss: 0.174059
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:108/375 loss: 0.193422
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:109/375 loss: 0.175383
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:110/375 loss: 0.140027
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:111/375 loss: 0.035964
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:112/375 loss: 0.051442
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:113/375 loss: 0.142624
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:114/375 loss: 0.046969
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:115/375 loss: 0.014112
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:116/375 loss: 0.004621
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:117/375 loss: 0.004327
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:118/375 loss: 0.003330
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([4])
+the 1 size of 3d and t is  torch.Size([4, 4096]) torch.Size([4])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:119/375 loss: 0.564189
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:120/375 loss: 0.089595
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([10])
+the 1 size of 3d and t is  torch.Size([10, 4096]) torch.Size([10])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:121/375 loss: 0.348227
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:122/375 loss: 0.078423
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:123/375 loss: 0.008913
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:124/375 loss: 0.009874
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:125/375 loss: 0.004085
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:126/375 loss: 0.008532
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:127/375 loss: 0.002701
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([2])
+the 1 size of 3d and t is  torch.Size([2, 4096]) torch.Size([2])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:128/375 loss: 0.095222
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:129/375 loss: 0.006941
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:130/375 loss: 0.004078
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:131/375 loss: 0.009905
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([2])
+the 1 size of 3d and t is  torch.Size([2, 4096]) torch.Size([2])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:132/375 loss: 0.411092
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:133/375 loss: 0.040349
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([16])
+the 1 size of 3d and t is  torch.Size([16, 4096]) torch.Size([16])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:134/375 loss: 0.112789
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:135/375 loss: 0.003025
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:136/375 loss: 0.007008
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:137/375 loss: 0.005865
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:138/375 loss: 0.005001
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:139/375 loss: 0.047745
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:140/375 loss: 0.008373
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([18])
+the 1 size of 3d and t is  torch.Size([18, 4096]) torch.Size([18])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:141/375 loss: 1.187902
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:142/375 loss: 0.034885
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:143/375 loss: 0.104275
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:144/375 loss: 0.155986
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:145/375 loss: 0.254350
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:146/375 loss: 0.358451
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:147/375 loss: 1.018048
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:148/375 loss: 0.335247
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:149/375 loss: 0.151380
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:150/375 loss: 0.015208
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:151/375 loss: 0.050479
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:152/375 loss: 0.029887
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([3])
+the 1 size of 3d and t is  torch.Size([3, 4096]) torch.Size([3])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:153/375 loss: 12.262633
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([12])
+the 1 size of 3d and t is  torch.Size([12, 4096]) torch.Size([12])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:154/375 loss: 0.317217
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:155/375 loss: 0.038208
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:156/375 loss: 0.014060
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:157/375 loss: 0.005933
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:158/375 loss: 0.006850
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:159/375 loss: 0.010988
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:160/375 loss: 0.007204
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:161/375 loss: 0.022732
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:162/375 loss: 0.010604
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:163/375 loss: 0.009210
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:164/375 loss: 0.010389
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:165/375 loss: 0.003228
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:166/375 loss: 0.002246
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:167/375 loss: 0.008716
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:168/375 loss: 0.002360
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:169/375 loss: 0.002959
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([9])
+the 1 size of 3d and t is  torch.Size([9, 4096]) torch.Size([9])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:170/375 loss: 0.064779
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:171/375 loss: 0.006254
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:172/375 loss: 0.011306
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([4])
+the 1 size of 3d and t is  torch.Size([4, 4096]) torch.Size([4])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:173/375 loss: 3.364204
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:174/375 loss: 0.018459
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:175/375 loss: 0.005447
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:176/375 loss: 0.003707
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:177/375 loss: 0.004647
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:178/375 loss: 0.003605
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:179/375 loss: 0.003441
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:180/375 loss: 0.003708
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:181/375 loss: 0.003828
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:182/375 loss: 0.003295
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:183/375 loss: 0.002279
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:184/375 loss: 0.005951
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:185/375 loss: 0.007215
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:186/375 loss: 0.002965
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:187/375 loss: 0.007556
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:188/375 loss: 0.002877
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:189/375 loss: 0.002354
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:190/375 loss: 0.004104
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:191/375 loss: 0.002746
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:192/375 loss: 0.001811
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:193/375 loss: 0.001807
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:194/375 loss: 0.001631
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:195/375 loss: 0.001310
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:196/375 loss: 0.001096
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:197/375 loss: 0.001673
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:198/375 loss: 0.001255
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:199/375 loss: 0.001313
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:200/375 loss: 0.001654
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:201/375 loss: 0.001103
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:202/375 loss: 0.001010
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:203/375 loss: 0.001032
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:204/375 loss: 0.001299
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:205/375 loss: 0.000860
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([20])
+the 1 size of 3d and t is  torch.Size([20, 4096]) torch.Size([20])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:206/375 loss: 1.388277
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:207/375 loss: 0.060497
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:208/375 loss: 0.029216
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([10])
+the 1 size of 3d and t is  torch.Size([10, 4096]) torch.Size([10])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:209/375 loss: 0.930711
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:210/375 loss: 0.002550
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:211/375 loss: 0.007217
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:212/375 loss: 0.010236
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:213/375 loss: 0.011337
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:214/375 loss: 0.177601
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:215/375 loss: 0.012989
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:216/375 loss: 0.031064
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:217/375 loss: 0.024044
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:218/375 loss: 0.014278
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:219/375 loss: 0.460579
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:220/375 loss: 0.006111
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:221/375 loss: 0.126618
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:222/375 loss: 0.022805
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([9])
+the 1 size of 3d and t is  torch.Size([9, 4096]) torch.Size([9])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:223/375 loss: 3.042476
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:224/375 loss: 0.491617
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:225/375 loss: 1.450077
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:226/375 loss: 0.900224
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:227/375 loss: 0.454000
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:228/375 loss: 0.049859
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:229/375 loss: 0.011548
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([6])
+the 1 size of 3d and t is  torch.Size([6, 4096]) torch.Size([6])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:230/375 loss: 0.369127
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:231/375 loss: 0.004790
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:232/375 loss: 0.024985
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:233/375 loss: 0.205465
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:234/375 loss: 0.031269
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:235/375 loss: 0.014743
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:236/375 loss: 0.003336
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:237/375 loss: 0.003307
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:238/375 loss: 0.005458
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:239/375 loss: 0.006313
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:240/375 loss: 0.006163
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([3])
+the 1 size of 3d and t is  torch.Size([3, 4096]) torch.Size([3])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:241/375 loss: 4.398663
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:242/375 loss: 0.011981
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:243/375 loss: 0.028636
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:244/375 loss: 0.014231
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:245/375 loss: 0.117964
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:246/375 loss: 0.081217
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:247/375 loss: 0.037937
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:248/375 loss: 0.044883
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:249/375 loss: 0.065314
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:250/375 loss: 0.028913
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:251/375 loss: 0.030660
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:252/375 loss: 0.030003
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:253/375 loss: 0.084955
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:254/375 loss: 0.008086
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:255/375 loss: 0.009433
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:256/375 loss: 0.007387
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([2])
+the 1 size of 3d and t is  torch.Size([2, 4096]) torch.Size([2])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:257/375 loss: 2.140097
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:258/375 loss: 0.118690
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:259/375 loss: 0.063243
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:260/375 loss: 2.112284
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([10])
+the 1 size of 3d and t is  torch.Size([10, 4096]) torch.Size([10])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:261/375 loss: 12.296742
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:262/375 loss: 0.151563
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:263/375 loss: 0.161882
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:264/375 loss: 0.109138
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:265/375 loss: 0.009007
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:266/375 loss: 0.215156
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:267/375 loss: 0.607722
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([2])
+the 1 size of 3d and t is  torch.Size([2, 4096]) torch.Size([2])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:268/375 loss: 6.525831
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:269/375 loss: 0.227504
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([4])
+the 1 size of 3d and t is  torch.Size([4, 4096]) torch.Size([4])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:270/375 loss: 0.169542
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:271/375 loss: 0.143997
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:272/375 loss: 0.190627
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:273/375 loss: 0.082783
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([16])
+the 1 size of 3d and t is  torch.Size([16, 4096]) torch.Size([16])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:274/375 loss: 0.423555
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([3])
+the 1 size of 3d and t is  torch.Size([3, 4096]) torch.Size([3])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:275/375 loss: 0.065089
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:276/375 loss: 0.010217
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([10])
+the 1 size of 3d and t is  torch.Size([10, 4096]) torch.Size([10])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:277/375 loss: 0.073677
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:278/375 loss: 0.049729
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:279/375 loss: 0.008097
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:280/375 loss: 0.011521
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:281/375 loss: 0.006867
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:282/375 loss: 0.005724
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:283/375 loss: 0.001920
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:284/375 loss: 0.017575
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([52])
+the 1 size of 3d and t is  torch.Size([52, 4096]) torch.Size([52])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:285/375 loss: 0.651604
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:286/375 loss: 0.043837
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:287/375 loss: 0.015241
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:288/375 loss: 0.074722
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:289/375 loss: 0.089363
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:290/375 loss: 0.028632
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:291/375 loss: 0.018816
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:292/375 loss: 0.014205
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:293/375 loss: 0.009830
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:294/375 loss: 0.004037
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:295/375 loss: 0.019611
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:296/375 loss: 0.006455
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:297/375 loss: 0.003961
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:298/375 loss: 0.002878
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:299/375 loss: 0.003074
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([78])
+the 1 size of 3d and t is  torch.Size([78, 4096]) torch.Size([78])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:300/375 loss: 0.390014
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:301/375 loss: 0.066135
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:302/375 loss: 0.006762
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:303/375 loss: 0.338338
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:304/375 loss: 0.137426
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([10])
+the 1 size of 3d and t is  torch.Size([10, 4096]) torch.Size([10])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:305/375 loss: 1.090322
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([10])
+the 1 size of 3d and t is  torch.Size([10, 4096]) torch.Size([10])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:306/375 loss: 2.710831
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:307/375 loss: 0.016622
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:308/375 loss: 0.024211
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:309/375 loss: 0.006151
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:310/375 loss: 0.018143
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:311/375 loss: 0.032632
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:312/375 loss: 0.018843
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:313/375 loss: 0.011731
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:314/375 loss: 0.037737
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([14])
+the 1 size of 3d and t is  torch.Size([14, 4096]) torch.Size([14])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:315/375 loss: 0.137991
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([10])
+the 1 size of 3d and t is  torch.Size([10, 4096]) torch.Size([10])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:316/375 loss: 0.147240
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:317/375 loss: 0.023664
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:318/375 loss: 0.017216
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:319/375 loss: 0.309007
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([76])
+the 1 size of 3d and t is  torch.Size([76, 4096]) torch.Size([76])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:320/375 loss: 0.413529
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:321/375 loss: 0.015188
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:322/375 loss: 0.010607
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([31])
+the 1 size of 3d and t is  torch.Size([31, 4096]) torch.Size([31])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:323/375 loss: 0.373350
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:324/375 loss: 0.193777
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:325/375 loss: 0.033412
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:326/375 loss: 0.018463
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:327/375 loss: 0.004979
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:328/375 loss: 0.069067
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([24])
+the 1 size of 3d and t is  torch.Size([24, 4096]) torch.Size([24])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:329/375 loss: 0.174598
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([13])
+the 1 size of 3d and t is  torch.Size([13, 4096]) torch.Size([13])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:330/375 loss: 0.721290
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:331/375 loss: 0.039035
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:332/375 loss: 0.094918
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:333/375 loss: 0.092284
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([24])
+the 1 size of 3d and t is  torch.Size([24, 4096]) torch.Size([24])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:334/375 loss: 0.222583
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([4])
+the 1 size of 3d and t is  torch.Size([4, 4096]) torch.Size([4])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:335/375 loss: 0.099683
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([28])
+the 1 size of 3d and t is  torch.Size([28, 4096]) torch.Size([28])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:336/375 loss: 0.061968
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:337/375 loss: 0.088322
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([16])
+the 1 size of 3d and t is  torch.Size([16, 4096]) torch.Size([16])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:338/375 loss: 0.612907
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([30])
+the 1 size of 3d and t is  torch.Size([30, 4096]) torch.Size([30])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:339/375 loss: 0.212613
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([11])
+the 1 size of 3d and t is  torch.Size([11, 4096]) torch.Size([11])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:340/375 loss: 0.069413
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:341/375 loss: 0.005485
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([11])
+the 1 size of 3d and t is  torch.Size([11, 4096]) torch.Size([11])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:342/375 loss: 0.029787
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([11])
+the 1 size of 3d and t is  torch.Size([11, 4096]) torch.Size([11])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:343/375 loss: 0.028780
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:344/375 loss: 0.002490
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([24])
+the 1 size of 3d and t is  torch.Size([24, 4096]) torch.Size([24])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:345/375 loss: 0.048507
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([9])
+the 1 size of 3d and t is  torch.Size([9, 4096]) torch.Size([9])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:346/375 loss: 0.029477
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:347/375 loss: 0.002684
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([33])
+the 1 size of 3d and t is  torch.Size([33, 4096]) torch.Size([33])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:348/375 loss: 0.070230
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([12])
+the 1 size of 3d and t is  torch.Size([12, 4096]) torch.Size([12])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:349/375 loss: 0.092942
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([76])
+the 1 size of 3d and t is  torch.Size([76, 4096]) torch.Size([76])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:350/375 loss: 0.047336
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:351/375 loss: 0.010000
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:352/375 loss: 0.005772
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([28])
+the 1 size of 3d and t is  torch.Size([28, 4096]) torch.Size([28])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:353/375 loss: 0.046054
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:354/375 loss: 0.009675
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([20])
+the 1 size of 3d and t is  torch.Size([20, 4096]) torch.Size([20])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:355/375 loss: 0.363808
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([4])
+the 1 size of 3d and t is  torch.Size([4, 4096]) torch.Size([4])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:356/375 loss: 0.079413
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([28])
+the 1 size of 3d and t is  torch.Size([28, 4096]) torch.Size([28])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:357/375 loss: 0.044606
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([48])
+the 1 size of 3d and t is  torch.Size([48, 4096]) torch.Size([48])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:358/375 loss: 0.041405
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([54])
+the 1 size of 3d and t is  torch.Size([54, 4096]) torch.Size([54])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:359/375 loss: 0.031909
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([8])
+the 1 size of 3d and t is  torch.Size([8, 4096]) torch.Size([8])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:360/375 loss: 0.025633
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:361/375 loss: 0.003263
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:362/375 loss: 0.002795
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:363/375 loss: 0.002434
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:364/375 loss: 0.007817
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([18])
+the 1 size of 3d and t is  torch.Size([18, 4096]) torch.Size([18])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:365/375 loss: 0.097339
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([13])
+the 1 size of 3d and t is  torch.Size([13, 4096]) torch.Size([13])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:366/375 loss: 0.042128
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:367/375 loss: 0.029498
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([8])
+the 1 size of 3d and t is  torch.Size([8, 4096]) torch.Size([8])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:368/375 loss: 0.637555
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([36])
+the 1 size of 3d and t is  torch.Size([36, 4096]) torch.Size([36])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:369/375 loss: 0.252683
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:370/375 loss: 0.008410
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([2])
+the 1 size of 3d and t is  torch.Size([2, 4096]) torch.Size([2])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:371/375 loss: 0.056636
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:372/375 loss: 0.027677
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([3])
+the 1 size of 3d and t is  torch.Size([3, 4096]) torch.Size([3])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:373/375 loss: 0.078784
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 00 iters:374/375 loss: 0.003901
+375
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([36])
+the 1 size of 3d and t is  torch.Size([36, 4096]) torch.Size([36])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:00/375 loss: 00inf
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([8])
+the 1 size of 3d and t is  torch.Size([8, 4096]) torch.Size([8])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:01/375 loss: 10.737946
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:02/375 loss: 1.039401
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:03/375 loss: 0.405071
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:04/375 loss: 0.192317
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:05/375 loss: 0.321286
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([10])
+the 1 size of 3d and t is  torch.Size([10, 4096]) torch.Size([10])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:06/375 loss: 2.702976
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([61])
+the 1 size of 3d and t is  torch.Size([61, 4096]) torch.Size([61])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:07/375 loss: 1.952785
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([21])
+the 1 size of 3d and t is  torch.Size([21, 4096]) torch.Size([21])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:08/375 loss: 1.236175
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([28])
+the 1 size of 3d and t is  torch.Size([28, 4096]) torch.Size([28])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:09/375 loss: 0.968028
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:10/375 loss: 0.185854
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([35])
+the 1 size of 3d and t is  torch.Size([35, 4096]) torch.Size([35])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:11/375 loss: 0.703197
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:12/375 loss: 0.065566
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([42])
+the 1 size of 3d and t is  torch.Size([42, 4096]) torch.Size([42])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:13/375 loss: 0.690893
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:14/375 loss: 0.077712
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:15/375 loss: 0.061163
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([13])
+the 1 size of 3d and t is  torch.Size([13, 4096]) torch.Size([13])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:16/375 loss: 1.949188
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([41])
+the 1 size of 3d and t is  torch.Size([41, 4096]) torch.Size([41])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:17/375 loss: 1.100807
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([9])
+the 1 size of 3d and t is  torch.Size([9, 4096]) torch.Size([9])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:18/375 loss: 0.426823
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([7])
+the 1 size of 3d and t is  torch.Size([7, 4096]) torch.Size([7])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:19/375 loss: 2.518162
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:20/375 loss: 0.130839
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([14])
+the 1 size of 3d and t is  torch.Size([14, 4096]) torch.Size([14])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:21/375 loss: 0.653458
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([26])
+the 1 size of 3d and t is  torch.Size([26, 4096]) torch.Size([26])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:22/375 loss: 0.552980
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:23/375 loss: 0.094447
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:24/375 loss: 0.211165
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:25/375 loss: 0.094277
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([37])
+the 1 size of 3d and t is  torch.Size([37, 4096]) torch.Size([37])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:26/375 loss: 0.607701
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:27/375 loss: 0.195601
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:28/375 loss: 0.015973
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:29/375 loss: 0.013152
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([5])
+the 1 size of 3d and t is  torch.Size([5, 4096]) torch.Size([5])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:30/375 loss: 0.300953
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([5])
+the 1 size of 3d and t is  torch.Size([5, 4096]) torch.Size([5])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:31/375 loss: 0.248268
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([8])
+the 1 size of 3d and t is  torch.Size([8, 4096]) torch.Size([8])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:32/375 loss: 0.316030
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:33/375 loss: 0.009419
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([24])
+the 1 size of 3d and t is  torch.Size([24, 4096]) torch.Size([24])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:34/375 loss: 0.247476
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:35/375 loss: 0.011870
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([21])
+the 1 size of 3d and t is  torch.Size([21, 4096]) torch.Size([21])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:36/375 loss: 0.429524
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([14])
+the 1 size of 3d and t is  torch.Size([14, 4096]) torch.Size([14])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:37/375 loss: 0.203145
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([28])
+the 1 size of 3d and t is  torch.Size([28, 4096]) torch.Size([28])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:38/375 loss: 0.199778
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([10])
+the 1 size of 3d and t is  torch.Size([10, 4096]) torch.Size([10])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:39/375 loss: 0.202939
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([18])
+the 1 size of 3d and t is  torch.Size([18, 4096]) torch.Size([18])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:40/375 loss: 0.279543
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([24])
+the 1 size of 3d and t is  torch.Size([24, 4096]) torch.Size([24])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:41/375 loss: 0.179210
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([22])
+the 1 size of 3d and t is  torch.Size([22, 4096]) torch.Size([22])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:42/375 loss: 0.198554
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([52])
+the 1 size of 3d and t is  torch.Size([52, 4096]) torch.Size([52])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:43/375 loss: 0.176847
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([15])
+the 1 size of 3d and t is  torch.Size([15, 4096]) torch.Size([15])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:44/375 loss: 0.152027
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([7])
+the 1 size of 3d and t is  torch.Size([7, 4096]) torch.Size([7])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:45/375 loss: 0.158858
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:46/375 loss: 0.008225
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([8])
+the 1 size of 3d and t is  torch.Size([8, 4096]) torch.Size([8])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:47/375 loss: 0.116129
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([12])
+the 1 size of 3d and t is  torch.Size([12, 4096]) torch.Size([12])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:48/375 loss: 0.133848
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([31])
+the 1 size of 3d and t is  torch.Size([31, 4096]) torch.Size([31])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:49/375 loss: 0.172897
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([9])
+the 1 size of 3d and t is  torch.Size([9, 4096]) torch.Size([9])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:50/375 loss: 0.149918
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([28])
+the 1 size of 3d and t is  torch.Size([28, 4096]) torch.Size([28])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:51/375 loss: 0.182111
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([38])
+the 1 size of 3d and t is  torch.Size([38, 4096]) torch.Size([38])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:52/375 loss: 0.125081
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:53/375 loss: 0.002783
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:54/375 loss: 0.003271
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([18])
+the 1 size of 3d and t is  torch.Size([18, 4096]) torch.Size([18])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:55/375 loss: 0.135899
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:56/375 loss: 0.007254
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:57/375 loss: 0.007629
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([12])
+the 1 size of 3d and t is  torch.Size([12, 4096]) torch.Size([12])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:58/375 loss: 0.220650
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([12])
+the 1 size of 3d and t is  torch.Size([12, 4096]) torch.Size([12])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:59/375 loss: 0.115633
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([11])
+the 1 size of 3d and t is  torch.Size([11, 4096]) torch.Size([11])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:60/375 loss: 0.109629
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:61/375 loss: 0.033049
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([36])
+the 1 size of 3d and t is  torch.Size([36, 4096]) torch.Size([36])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:62/375 loss: 0.148821
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([43])
+the 1 size of 3d and t is  torch.Size([43, 4096]) torch.Size([43])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:63/375 loss: 0.134546
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([46])
+the 1 size of 3d and t is  torch.Size([46, 4096]) torch.Size([46])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:64/375 loss: 0.127101
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([60])
+the 1 size of 3d and t is  torch.Size([60, 4096]) torch.Size([60])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:65/375 loss: 0.130709
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([11])
+the 1 size of 3d and t is  torch.Size([11, 4096]) torch.Size([11])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:66/375 loss: 0.113902
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([22])
+the 1 size of 3d and t is  torch.Size([22, 4096]) torch.Size([22])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:67/375 loss: 0.107247
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([21])
+the 1 size of 3d and t is  torch.Size([21, 4096]) torch.Size([21])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:68/375 loss: 0.137358
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:69/375 loss: 0.002924
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:70/375 loss: 0.004990
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:71/375 loss: 0.006333
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:72/375 loss: 0.004110
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([18])
+the 1 size of 3d and t is  torch.Size([18, 4096]) torch.Size([18])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:73/375 loss: 0.104070
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:74/375 loss: 0.003293
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:75/375 loss: 0.003708
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([18])
+the 1 size of 3d and t is  torch.Size([18, 4096]) torch.Size([18])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:76/375 loss: 0.088256
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([12])
+the 1 size of 3d and t is  torch.Size([12, 4096]) torch.Size([12])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:77/375 loss: 0.084767
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([58])
+the 1 size of 3d and t is  torch.Size([58, 4096]) torch.Size([58])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:78/375 loss: 0.088038
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([52])
+the 1 size of 3d and t is  torch.Size([52, 4096]) torch.Size([52])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:79/375 loss: 0.840495
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([73])
+the 1 size of 3d and t is  torch.Size([73, 4096]) torch.Size([73])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:80/375 loss: 0.097269
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([34])
+the 1 size of 3d and t is  torch.Size([34, 4096]) torch.Size([34])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:81/375 loss: 0.112226
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:82/375 loss: 0.010912
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([48])
+the 1 size of 3d and t is  torch.Size([48, 4096]) torch.Size([48])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:83/375 loss: 0.095175
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([11])
+the 1 size of 3d and t is  torch.Size([11, 4096]) torch.Size([11])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:84/375 loss: 0.085061
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:85/375 loss: 0.002166
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:86/375 loss: 0.002176
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([8])
+the 1 size of 3d and t is  torch.Size([8, 4096]) torch.Size([8])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:87/375 loss: 0.087455
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([12])
+the 1 size of 3d and t is  torch.Size([12, 4096]) torch.Size([12])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:88/375 loss: 0.087020
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([12])
+the 1 size of 3d and t is  torch.Size([12, 4096]) torch.Size([12])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:89/375 loss: 0.093690
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:90/375 loss: 0.002560
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:91/375 loss: 0.002197
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([28])
+the 1 size of 3d and t is  torch.Size([28, 4096]) torch.Size([28])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:92/375 loss: 0.084502
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([26])
+the 1 size of 3d and t is  torch.Size([26, 4096]) torch.Size([26])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:93/375 loss: 0.078232
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([3])
+the 1 size of 3d and t is  torch.Size([3, 4096]) torch.Size([3])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:94/375 loss: 0.078645
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([12])
+the 1 size of 3d and t is  torch.Size([12, 4096]) torch.Size([12])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:95/375 loss: 0.076034
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([9])
+the 1 size of 3d and t is  torch.Size([9, 4096]) torch.Size([9])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:96/375 loss: 0.074528
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([72])
+the 1 size of 3d and t is  torch.Size([72, 4096]) torch.Size([72])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:97/375 loss: 0.081470
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([11])
+the 1 size of 3d and t is  torch.Size([11, 4096]) torch.Size([11])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:98/375 loss: 0.089765
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:99/375 loss: 0.002450
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([18])
+the 1 size of 3d and t is  torch.Size([18, 4096]) torch.Size([18])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:100/375 loss: 0.073305
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([55])
+the 1 size of 3d and t is  torch.Size([55, 4096]) torch.Size([55])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:101/375 loss: 0.070761
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([30])
+the 1 size of 3d and t is  torch.Size([30, 4096]) torch.Size([30])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:102/375 loss: 0.070015
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([69])
+the 1 size of 3d and t is  torch.Size([69, 4096]) torch.Size([69])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:103/375 loss: 0.065404
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([7])
+the 1 size of 3d and t is  torch.Size([7, 4096]) torch.Size([7])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:104/375 loss: 0.062672
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([9])
+the 1 size of 3d and t is  torch.Size([9, 4096]) torch.Size([9])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:105/375 loss: 0.071055
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:106/375 loss: 0.001140
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:107/375 loss: 0.004018
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([8])
+the 1 size of 3d and t is  torch.Size([8, 4096]) torch.Size([8])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:108/375 loss: 1.911110
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([10])
+the 1 size of 3d and t is  torch.Size([10, 4096]) torch.Size([10])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:109/375 loss: 0.218569
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:110/375 loss: 0.044348
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:111/375 loss: 0.071187
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:112/375 loss: 0.015330
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([34])
+the 1 size of 3d and t is  torch.Size([34, 4096]) torch.Size([34])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:113/375 loss: 0.089200
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([11])
+the 1 size of 3d and t is  torch.Size([11, 4096]) torch.Size([11])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:114/375 loss: 0.071280
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:115/375 loss: 0.025806
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([24])
+the 1 size of 3d and t is  torch.Size([24, 4096]) torch.Size([24])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:116/375 loss: 0.111258
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([26])
+the 1 size of 3d and t is  torch.Size([26, 4096]) torch.Size([26])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:117/375 loss: 0.091537
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([30])
+the 1 size of 3d and t is  torch.Size([30, 4096]) torch.Size([30])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:118/375 loss: 0.089370
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([40])
+the 1 size of 3d and t is  torch.Size([40, 4096]) torch.Size([40])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:119/375 loss: 0.079788
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([15])
+the 1 size of 3d and t is  torch.Size([15, 4096]) torch.Size([15])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:120/375 loss: 0.070191
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([44])
+the 1 size of 3d and t is  torch.Size([44, 4096]) torch.Size([44])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:121/375 loss: 0.059934
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([11])
+the 1 size of 3d and t is  torch.Size([11, 4096]) torch.Size([11])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:122/375 loss: 0.133087
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([16])
+the 1 size of 3d and t is  torch.Size([16, 4096]) torch.Size([16])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:123/375 loss: 0.066702
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:124/375 loss: 0.003119
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:125/375 loss: 0.003464
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([27])
+the 1 size of 3d and t is  torch.Size([27, 4096]) torch.Size([27])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:126/375 loss: 0.070792
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([11])
+the 1 size of 3d and t is  torch.Size([11, 4096]) torch.Size([11])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:127/375 loss: 0.062726
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:128/375 loss: 0.006263
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([45])
+the 1 size of 3d and t is  torch.Size([45, 4096]) torch.Size([45])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:129/375 loss: 0.085089
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:130/375 loss: 0.001112
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:131/375 loss: 0.001306
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([24])
+the 1 size of 3d and t is  torch.Size([24, 4096]) torch.Size([24])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:132/375 loss: 0.163465
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:133/375 loss: 0.001152
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:134/375 loss: 0.001094
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:135/375 loss: 0.001338
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:136/375 loss: 0.001449
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([9])
+the 1 size of 3d and t is  torch.Size([9, 4096]) torch.Size([9])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:137/375 loss: 0.055851
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([29])
+the 1 size of 3d and t is  torch.Size([29, 4096]) torch.Size([29])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:138/375 loss: 0.058845
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([7])
+the 1 size of 3d and t is  torch.Size([7, 4096]) torch.Size([7])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:139/375 loss: 0.115707
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:140/375 loss: 0.001188
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([52])
+the 1 size of 3d and t is  torch.Size([52, 4096]) torch.Size([52])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:141/375 loss: 0.063317
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([9])
+the 1 size of 3d and t is  torch.Size([9, 4096]) torch.Size([9])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:142/375 loss: 0.058810
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([54])
+the 1 size of 3d and t is  torch.Size([54, 4096]) torch.Size([54])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:143/375 loss: 0.055831
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([10])
+the 1 size of 3d and t is  torch.Size([10, 4096]) torch.Size([10])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:144/375 loss: 0.056417
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([13])
+the 1 size of 3d and t is  torch.Size([13, 4096]) torch.Size([13])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:145/375 loss: 0.054129
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([13])
+the 1 size of 3d and t is  torch.Size([13, 4096]) torch.Size([13])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:146/375 loss: 0.054284
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:147/375 loss: 0.001406
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:148/375 loss: 0.000969
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:149/375 loss: 0.000596
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:150/375 loss: 0.000563
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:151/375 loss: 0.000665
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([14])
+the 1 size of 3d and t is  torch.Size([14, 4096]) torch.Size([14])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:152/375 loss: 0.041252
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:153/375 loss: 0.006431
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:154/375 loss: 0.002601
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:155/375 loss: 0.004344
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:156/375 loss: 0.011657
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([13])
+the 1 size of 3d and t is  torch.Size([13, 4096]) torch.Size([13])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:157/375 loss: 0.100050
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([26])
+the 1 size of 3d and t is  torch.Size([26, 4096]) torch.Size([26])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:158/375 loss: 0.084315
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:159/375 loss: 0.001358
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([46])
+the 1 size of 3d and t is  torch.Size([46, 4096]) torch.Size([46])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:160/375 loss: 0.048035
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([20])
+the 1 size of 3d and t is  torch.Size([20, 4096]) torch.Size([20])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:161/375 loss: 0.049807
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([10])
+the 1 size of 3d and t is  torch.Size([10, 4096]) torch.Size([10])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:162/375 loss: 0.046348
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:163/375 loss: 0.000960
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([10])
+the 1 size of 3d and t is  torch.Size([10, 4096]) torch.Size([10])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:164/375 loss: 0.044567
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([42])
+the 1 size of 3d and t is  torch.Size([42, 4096]) torch.Size([42])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:165/375 loss: 0.048004
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:166/375 loss: 0.000650
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([17])
+the 1 size of 3d and t is  torch.Size([17, 4096]) torch.Size([17])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:167/375 loss: 0.045730
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([24])
+the 1 size of 3d and t is  torch.Size([24, 4096]) torch.Size([24])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:168/375 loss: 0.045262
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([106])
+the 1 size of 3d and t is  torch.Size([106, 4096]) torch.Size([106])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:169/375 loss: 0.050444
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([10])
+the 1 size of 3d and t is  torch.Size([10, 4096]) torch.Size([10])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:170/375 loss: 0.041964
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:171/375 loss: 0.001873
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([26])
+the 1 size of 3d and t is  torch.Size([26, 4096]) torch.Size([26])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:172/375 loss: 0.037051
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([27])
+the 1 size of 3d and t is  torch.Size([27, 4096]) torch.Size([27])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:173/375 loss: 0.045493
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([8])
+the 1 size of 3d and t is  torch.Size([8, 4096]) torch.Size([8])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:174/375 loss: 0.038596
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([11])
+the 1 size of 3d and t is  torch.Size([11, 4096]) torch.Size([11])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:175/375 loss: 0.040627
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([26])
+the 1 size of 3d and t is  torch.Size([26, 4096]) torch.Size([26])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:176/375 loss: 0.036200
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([64])
+the 1 size of 3d and t is  torch.Size([64, 4096]) torch.Size([64])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:177/375 loss: 0.055043
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([8])
+the 1 size of 3d and t is  torch.Size([8, 4096]) torch.Size([8])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:178/375 loss: 0.035746
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([9])
+the 1 size of 3d and t is  torch.Size([9, 4096]) torch.Size([9])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:179/375 loss: 0.035415
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([20])
+the 1 size of 3d and t is  torch.Size([20, 4096]) torch.Size([20])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:180/375 loss: 0.035393
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([36])
+the 1 size of 3d and t is  torch.Size([36, 4096]) torch.Size([36])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:181/375 loss: 0.032091
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([27])
+the 1 size of 3d and t is  torch.Size([27, 4096]) torch.Size([27])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:182/375 loss: 0.035727
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([77])
+the 1 size of 3d and t is  torch.Size([77, 4096]) torch.Size([77])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:183/375 loss: 0.032034
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([13])
+the 1 size of 3d and t is  torch.Size([13, 4096]) torch.Size([13])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:184/375 loss: 0.044585
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:185/375 loss: 0.000593
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([7])
+the 1 size of 3d and t is  torch.Size([7, 4096]) torch.Size([7])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:186/375 loss: 0.038155
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([39])
+the 1 size of 3d and t is  torch.Size([39, 4096]) torch.Size([39])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:187/375 loss: 0.038160
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([41])
+the 1 size of 3d and t is  torch.Size([41, 4096]) torch.Size([41])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:188/375 loss: 0.030826
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([49])
+the 1 size of 3d and t is  torch.Size([49, 4096]) torch.Size([49])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:189/375 loss: 0.031917
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([42])
+the 1 size of 3d and t is  torch.Size([42, 4096]) torch.Size([42])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:190/375 loss: 0.036131
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([55])
+the 1 size of 3d and t is  torch.Size([55, 4096]) torch.Size([55])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:191/375 loss: 0.032489
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([9])
+the 1 size of 3d and t is  torch.Size([9, 4096]) torch.Size([9])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:192/375 loss: 0.038441
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([8])
+the 1 size of 3d and t is  torch.Size([8, 4096]) torch.Size([8])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:193/375 loss: 0.031707
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:194/375 loss: 0.001076
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:195/375 loss: 0.001227
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([13])
+the 1 size of 3d and t is  torch.Size([13, 4096]) torch.Size([13])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:196/375 loss: 0.047081
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:197/375 loss: 0.005630
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([24])
+the 1 size of 3d and t is  torch.Size([24, 4096]) torch.Size([24])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:198/375 loss: 0.031973
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([9])
+the 1 size of 3d and t is  torch.Size([9, 4096]) torch.Size([9])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:199/375 loss: 0.028409
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:200/375 loss: 0.003468
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([110])
+the 1 size of 3d and t is  torch.Size([110, 4096]) torch.Size([110])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:201/375 loss: 0.071992
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([64])
+the 1 size of 3d and t is  torch.Size([64, 4096]) torch.Size([64])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:202/375 loss: 0.047755
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([55])
+the 1 size of 3d and t is  torch.Size([55, 4096]) torch.Size([55])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:203/375 loss: 0.155104
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([21])
+the 1 size of 3d and t is  torch.Size([21, 4096]) torch.Size([21])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:204/375 loss: 0.048356
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([56])
+the 1 size of 3d and t is  torch.Size([56, 4096]) torch.Size([56])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:205/375 loss: 0.054548
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:206/375 loss: 0.006063
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([96])
+the 1 size of 3d and t is  torch.Size([96, 4096]) torch.Size([96])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:207/375 loss: 0.048595
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([40])
+the 1 size of 3d and t is  torch.Size([40, 4096]) torch.Size([40])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:208/375 loss: 0.041710
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([27])
+the 1 size of 3d and t is  torch.Size([27, 4096]) torch.Size([27])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:209/375 loss: 0.032612
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:210/375 loss: 0.007316
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([13])
+the 1 size of 3d and t is  torch.Size([13, 4096]) torch.Size([13])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:211/375 loss: 0.036710
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([16])
+the 1 size of 3d and t is  torch.Size([16, 4096]) torch.Size([16])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:212/375 loss: 0.033002
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([28])
+the 1 size of 3d and t is  torch.Size([28, 4096]) torch.Size([28])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:213/375 loss: 0.046956
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([31])
+the 1 size of 3d and t is  torch.Size([31, 4096]) torch.Size([31])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:214/375 loss: 0.033553
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:215/375 loss: 0.001868
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([90])
+the 1 size of 3d and t is  torch.Size([90, 4096]) torch.Size([90])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:216/375 loss: 0.036008
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([21])
+the 1 size of 3d and t is  torch.Size([21, 4096]) torch.Size([21])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:217/375 loss: 0.031832
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:218/375 loss: 0.001045
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([39])
+the 1 size of 3d and t is  torch.Size([39, 4096]) torch.Size([39])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:219/375 loss: 0.032308
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:220/375 loss: 0.000666
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([7])
+the 1 size of 3d and t is  torch.Size([7, 4096]) torch.Size([7])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:221/375 loss: 0.031173
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:222/375 loss: 0.000541
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([9])
+the 1 size of 3d and t is  torch.Size([9, 4096]) torch.Size([9])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:223/375 loss: 0.026924
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:224/375 loss: 0.000439
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:225/375 loss: 0.000738
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:226/375 loss: 0.000422
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:227/375 loss: 0.000544
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:228/375 loss: 0.000516
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:229/375 loss: 0.000463
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([36])
+the 1 size of 3d and t is  torch.Size([36, 4096]) torch.Size([36])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:230/375 loss: 0.071992
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([78])
+the 1 size of 3d and t is  torch.Size([78, 4096]) torch.Size([78])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:231/375 loss: 0.033540
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:232/375 loss: 0.001255
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:233/375 loss: 0.001565
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([60])
+the 1 size of 3d and t is  torch.Size([60, 4096]) torch.Size([60])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:234/375 loss: 0.034716
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([47])
+the 1 size of 3d and t is  torch.Size([47, 4096]) torch.Size([47])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:235/375 loss: 0.033403
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:236/375 loss: 0.001139
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([18])
+the 1 size of 3d and t is  torch.Size([18, 4096]) torch.Size([18])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:237/375 loss: 0.033753
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([8])
+the 1 size of 3d and t is  torch.Size([8, 4096]) torch.Size([8])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:238/375 loss: 0.032537
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([20])
+the 1 size of 3d and t is  torch.Size([20, 4096]) torch.Size([20])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:239/375 loss: 0.055916
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:240/375 loss: 0.000802
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([33])
+the 1 size of 3d and t is  torch.Size([33, 4096]) torch.Size([33])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:241/375 loss: 0.043263
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([20])
+the 1 size of 3d and t is  torch.Size([20, 4096]) torch.Size([20])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:242/375 loss: 0.031232
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([22])
+the 1 size of 3d and t is  torch.Size([22, 4096]) torch.Size([22])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:243/375 loss: 0.031098
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([22])
+the 1 size of 3d and t is  torch.Size([22, 4096]) torch.Size([22])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:244/375 loss: 0.030853
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([50])
+the 1 size of 3d and t is  torch.Size([50, 4096]) torch.Size([50])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:245/375 loss: 0.030836
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([71])
+the 1 size of 3d and t is  torch.Size([71, 4096]) torch.Size([71])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:246/375 loss: 0.027795
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([118])
+the 1 size of 3d and t is  torch.Size([118, 4096]) torch.Size([118])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:247/375 loss: 0.030438
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([9])
+the 1 size of 3d and t is  torch.Size([9, 4096]) torch.Size([9])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:248/375 loss: 0.027461
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([59])
+the 1 size of 3d and t is  torch.Size([59, 4096]) torch.Size([59])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:249/375 loss: 0.032558
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([66])
+the 1 size of 3d and t is  torch.Size([66, 4096]) torch.Size([66])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:250/375 loss: 0.025722
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([128])
+the 1 size of 3d and t is  torch.Size([128, 4096]) torch.Size([128])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:251/375 loss: 0.029497
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([44])
+the 1 size of 3d and t is  torch.Size([44, 4096]) torch.Size([44])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:252/375 loss: 0.027834
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([14])
+the 1 size of 3d and t is  torch.Size([14, 4096]) torch.Size([14])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:253/375 loss: 0.025654
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([18])
+the 1 size of 3d and t is  torch.Size([18, 4096]) torch.Size([18])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:254/375 loss: 0.023986
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([8])
+the 1 size of 3d and t is  torch.Size([8, 4096]) torch.Size([8])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:255/375 loss: 0.032198
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([28])
+the 1 size of 3d and t is  torch.Size([28, 4096]) torch.Size([28])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:256/375 loss: 0.023792
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([9])
+the 1 size of 3d and t is  torch.Size([9, 4096]) torch.Size([9])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:257/375 loss: 0.024141
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([26])
+the 1 size of 3d and t is  torch.Size([26, 4096]) torch.Size([26])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:258/375 loss: 0.024962
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([10])
+the 1 size of 3d and t is  torch.Size([10, 4096]) torch.Size([10])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:259/375 loss: 0.032604
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:260/375 loss: 0.000529
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([26])
+the 1 size of 3d and t is  torch.Size([26, 4096]) torch.Size([26])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:261/375 loss: 0.022048
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:262/375 loss: 0.000676
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([16])
+the 1 size of 3d and t is  torch.Size([16, 4096]) torch.Size([16])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:263/375 loss: 0.023027
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([11])
+the 1 size of 3d and t is  torch.Size([11, 4096]) torch.Size([11])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:264/375 loss: 0.018915
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([12])
+the 1 size of 3d and t is  torch.Size([12, 4096]) torch.Size([12])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:265/375 loss: 0.019379
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:266/375 loss: 0.000602
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([20])
+the 1 size of 3d and t is  torch.Size([20, 4096]) torch.Size([20])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:267/375 loss: 0.032807
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([30])
+the 1 size of 3d and t is  torch.Size([30, 4096]) torch.Size([30])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:268/375 loss: 0.029373
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([16])
+the 1 size of 3d and t is  torch.Size([16, 4096]) torch.Size([16])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:269/375 loss: 0.042527
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([51])
+the 1 size of 3d and t is  torch.Size([51, 4096]) torch.Size([51])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:270/375 loss: 0.024668
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([40])
+the 1 size of 3d and t is  torch.Size([40, 4096]) torch.Size([40])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:271/375 loss: 0.026911
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([28])
+the 1 size of 3d and t is  torch.Size([28, 4096]) torch.Size([28])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:272/375 loss: 0.026365
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([28])
+the 1 size of 3d and t is  torch.Size([28, 4096]) torch.Size([28])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:273/375 loss: 0.025656
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:274/375 loss: 0.000730
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([27])
+the 1 size of 3d and t is  torch.Size([27, 4096]) torch.Size([27])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:275/375 loss: 0.023679
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:276/375 loss: 0.000682
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([37])
+the 1 size of 3d and t is  torch.Size([37, 4096]) torch.Size([37])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:277/375 loss: 0.022940
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:278/375 loss: 0.000703
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([44])
+the 1 size of 3d and t is  torch.Size([44, 4096]) torch.Size([44])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:279/375 loss: 0.029317
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([42])
+the 1 size of 3d and t is  torch.Size([42, 4096]) torch.Size([42])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:280/375 loss: 0.019770
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([46])
+the 1 size of 3d and t is  torch.Size([46, 4096]) torch.Size([46])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:281/375 loss: 0.019462
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([15])
+the 1 size of 3d and t is  torch.Size([15, 4096]) torch.Size([15])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:282/375 loss: 0.020409
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:283/375 loss: 0.006529
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([154])
+the 1 size of 3d and t is  torch.Size([154, 4096]) torch.Size([154])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:284/375 loss: 0.026040
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:285/375 loss: 0.000761
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([28])
+the 1 size of 3d and t is  torch.Size([28, 4096]) torch.Size([28])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:286/375 loss: 0.023460
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:287/375 loss: 0.000629
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([13])
+the 1 size of 3d and t is  torch.Size([13, 4096]) torch.Size([13])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:288/375 loss: 0.023828
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([11])
+the 1 size of 3d and t is  torch.Size([11, 4096]) torch.Size([11])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:289/375 loss: 0.021519
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([21])
+the 1 size of 3d and t is  torch.Size([21, 4096]) torch.Size([21])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:290/375 loss: 0.025469
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([50])
+the 1 size of 3d and t is  torch.Size([50, 4096]) torch.Size([50])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:291/375 loss: 0.022186
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([94])
+the 1 size of 3d and t is  torch.Size([94, 4096]) torch.Size([94])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:292/375 loss: 0.024420
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([26])
+the 1 size of 3d and t is  torch.Size([26, 4096]) torch.Size([26])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:293/375 loss: 0.022177
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:294/375 loss: 0.000562
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([10])
+the 1 size of 3d and t is  torch.Size([10, 4096]) torch.Size([10])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:295/375 loss: 0.020179
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([42])
+the 1 size of 3d and t is  torch.Size([42, 4096]) torch.Size([42])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:296/375 loss: 0.020266
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([63])
+the 1 size of 3d and t is  torch.Size([63, 4096]) torch.Size([63])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:297/375 loss: 0.018593
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([22])
+the 1 size of 3d and t is  torch.Size([22, 4096]) torch.Size([22])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:298/375 loss: 0.022629
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([39])
+the 1 size of 3d and t is  torch.Size([39, 4096]) torch.Size([39])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:299/375 loss: 0.021241
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([28])
+the 1 size of 3d and t is  torch.Size([28, 4096]) torch.Size([28])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:300/375 loss: 0.018032
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([60])
+the 1 size of 3d and t is  torch.Size([60, 4096]) torch.Size([60])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:301/375 loss: 0.025968
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([33])
+the 1 size of 3d and t is  torch.Size([33, 4096]) torch.Size([33])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:302/375 loss: 0.019222
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([13])
+the 1 size of 3d and t is  torch.Size([13, 4096]) torch.Size([13])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:303/375 loss: 0.020463
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([35])
+the 1 size of 3d and t is  torch.Size([35, 4096]) torch.Size([35])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:304/375 loss: 0.019140
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:305/375 loss: 0.000598
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([57])
+the 1 size of 3d and t is  torch.Size([57, 4096]) torch.Size([57])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:306/375 loss: 0.019949
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([74])
+the 1 size of 3d and t is  torch.Size([74, 4096]) torch.Size([74])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:307/375 loss: 0.020421
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([45])
+the 1 size of 3d and t is  torch.Size([45, 4096]) torch.Size([45])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:308/375 loss: 0.019389
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([30])
+the 1 size of 3d and t is  torch.Size([30, 4096]) torch.Size([30])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:309/375 loss: 0.020898
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([117])
+the 1 size of 3d and t is  torch.Size([117, 4096]) torch.Size([117])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:310/375 loss: 0.018978
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([85])
+the 1 size of 3d and t is  torch.Size([85, 4096]) torch.Size([85])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:311/375 loss: 0.019896
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([28])
+the 1 size of 3d and t is  torch.Size([28, 4096]) torch.Size([28])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:312/375 loss: 0.022607
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([44])
+the 1 size of 3d and t is  torch.Size([44, 4096]) torch.Size([44])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:313/375 loss: 0.019487
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([25])
+the 1 size of 3d and t is  torch.Size([25, 4096]) torch.Size([25])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:314/375 loss: 0.016084
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([47])
+the 1 size of 3d and t is  torch.Size([47, 4096]) torch.Size([47])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:315/375 loss: 4.316612
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([51])
+the 1 size of 3d and t is  torch.Size([51, 4096]) torch.Size([51])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:316/375 loss: 0.070151
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([90])
+the 1 size of 3d and t is  torch.Size([90, 4096]) torch.Size([90])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:317/375 loss: 0.045117
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([18])
+the 1 size of 3d and t is  torch.Size([18, 4096]) torch.Size([18])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:318/375 loss: 0.063639
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:319/375 loss: 0.032290THCudaCheck FAIL file=/pytorch/aten/src/THC/generic/THCTensorMath.cu line=26 error=59 : device-side assert triggered
+/pytorch/aten/src/THCUNN/ClassNLLCriterion.cu:105: void cunn_ClassNLLCriterion_updateOutput_kernel(Dtype *, Dtype *, Dtype *, long *, Dtype *, int, int, int, int, long) [with Dtype = float, Acctype = float]: block: [0,0,0], thread: [0,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/THCUNN/ClassNLLCriterion.cu:105: void cunn_ClassNLLCriterion_updateOutput_kernel(Dtype *, Dtype *, Dtype *, long *, Dtype *, int, int, int, int, long) [with Dtype = float, Acctype = float]: block: [0,0,0], thread: [1,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/THCUNN/ClassNLLCriterion.cu:105: void cunn_ClassNLLCriterion_updateOutput_kernel(Dtype *, Dtype *, Dtype *, long *, Dtype *, int, int, int, int, long) [with Dtype = float, Acctype = float]: block: [0,0,0], thread: [2,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/THCUNN/ClassNLLCriterion.cu:105: void cunn_ClassNLLCriterion_updateOutput_kernel(Dtype *, Dtype *, Dtype *, long *, Dtype *, int, int, int, int, long) [with Dtype = float, Acctype = float]: block: [0,0,0], thread: [3,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/THCUNN/ClassNLLCriterion.cu:105: void cunn_ClassNLLCriterion_updateOutput_kernel(Dtype *, Dtype *, Dtype *, long *, Dtype *, int, int, int, int, long) [with Dtype = float, Acctype = float]: block: [0,0,0], thread: [4,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/THCUNN/ClassNLLCriterion.cu:105: void cunn_ClassNLLCriterion_updateOutput_kernel(Dtype *, Dtype *, Dtype *, long *, Dtype *, int, int, int, int, long) [with Dtype = float, Acctype = float]: block: [0,0,0], thread: [5,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/THCUNN/ClassNLLCriterion.cu:105: void cunn_ClassNLLCriterion_updateOutput_kernel(Dtype *, Dtype *, Dtype *, long *, Dtype *, int, int, int, int, long) [with Dtype = float, Acctype = float]: block: [0,0,0], thread: [6,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/THCUNN/ClassNLLCriterion.cu:105: void cunn_ClassNLLCriterion_updateOutput_kernel(Dtype *, Dtype *, Dtype *, long *, Dtype *, int, int, int, int, long) [with Dtype = float, Acctype = float]: block: [0,0,0], thread: [7,0,0] Assertion `t >= 0 && t < n_classes` failed.
+
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:320/375 loss: 0.022306
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:321/375 loss: 0.006531
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([7])
+the 1 size of 3d and t is  torch.Size([7, 4096]) torch.Size([7])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:322/375 loss: 0.034204
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:323/375 loss: 0.024494
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:324/375 loss: 0.029565
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([6])
+the 1 size of 3d and t is  torch.Size([6, 4096]) torch.Size([6])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:325/375 loss: 0.040333
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([30])
+the 1 size of 3d and t is  torch.Size([30, 4096]) torch.Size([30])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:326/375 loss: 0.044106
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:327/375 loss: 0.007890
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([20])
+the 1 size of 3d and t is  torch.Size([20, 4096]) torch.Size([20])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:328/375 loss: 0.040030
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([51])
+the 1 size of 3d and t is  torch.Size([51, 4096]) torch.Size([51])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:329/375 loss: 0.086893
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([105])
+the 1 size of 3d and t is  torch.Size([105, 4096]) torch.Size([105])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:330/375 loss: 0.065984
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([22])
+the 1 size of 3d and t is  torch.Size([22, 4096]) torch.Size([22])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:331/375 loss: 0.174794
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([9])
+the 1 size of 3d and t is  torch.Size([9, 4096]) torch.Size([9])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:332/375 loss: 0.091624
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([32])
+the 1 size of 3d and t is  torch.Size([32, 4096]) torch.Size([32])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:333/375 loss: 0.028466
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([13])
+the 1 size of 3d and t is  torch.Size([13, 4096]) torch.Size([13])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:334/375 loss: 0.053797
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:335/375 loss: 0.022368
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:336/375 loss: 0.022536
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:337/375 loss: 0.022829
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:338/375 loss: 0.055116
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([23])
+the 1 size of 3d and t is  torch.Size([23, 4096]) torch.Size([23])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:339/375 loss: 0.179772
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([17])
+the 1 size of 3d and t is  torch.Size([17, 4096]) torch.Size([17])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:340/375 loss: 0.037019
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:341/375 loss: 0.019624
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:342/375 loss: 0.028757
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:343/375 loss: 0.005738
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:344/375 loss: 0.007440
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:345/375 loss: 0.007074
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:346/375 loss: 0.005392
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([6])
+the 1 size of 3d and t is  torch.Size([6, 4096]) torch.Size([6])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:347/375 loss: 0.061899
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([30])
+the 1 size of 3d and t is  torch.Size([30, 4096]) torch.Size([30])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:348/375 loss: 0.054978
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([8])
+the 1 size of 3d and t is  torch.Size([8, 4096]) torch.Size([8])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:349/375 loss: 0.043708
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:350/375 loss: 0.008178
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:351/375 loss: 0.019626
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([14])
+the 1 size of 3d and t is  torch.Size([14, 4096]) torch.Size([14])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:352/375 loss: 0.034781
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([0])
+the current logs epoch: 01 iters:353/375 loss: 0.006967
+torch.Size([8, 3, 256, 256])
+the rcnn loss valid is  torch.Size([0])
+the model has depth 
+the 3d loss valid is  torch.Size([8])
+the  3 size of 3d and t is  torch.Size([8, 4096]) torch.Size([8])
+the keypoint3d_targets is  tensor([6013.6929, 6013.6929, 6013.6929, 6013.6929, 6013.6929, 6013.6929,
+        6013.6929, 6013.6929], device='cuda:0')
+Traceback (most recent call last):
+  File "main.py", line 93, in <module>
+    main(opt)
+  File "main.py", line 75, in main
+    loss, log_dict_train = train_3d(epoch, opt, train_loader, model, optimizer)
+  File "/data/ai/xxy/mask_rcnn/maskrcnn_3d/models/detection/train_mask2.py", line 143, in train_3d
+    return step('train', epoch, opt, train_loader, model, optimizer)
+  File "/data/ai/xxy/mask_rcnn/maskrcnn_3d/models/detection/train_mask2.py", line 73, in step
+    optimizer.zero_grad()
+  File "/home/ai/anaconda3/envs/mask/lib/python3.5/site-packages/torch/optim/optimizer.py", line 164, in zero_grad
+    p.grad.zero_()
+RuntimeError: cuda runtime error (59) : device-side assert triggered at /pytorch/aten/src/THC/generic/THCTensorMath.cu:26

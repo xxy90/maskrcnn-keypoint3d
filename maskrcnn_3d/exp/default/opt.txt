@@ -1,0 +1,54 @@
+==> torch version: 1.1.0
+==> cudnn version: 7501
+==> Cmd:
+['main.py']
+==> Opt:
+  all_pts: False
+  alpha: 0.99
+  arch: msra_101
+  batch_size: 4
+  data_dir: /data/ai/xxy/mask_rcnn/../../data
+  dataset: mpii
+  debug: 0
+  demo: ../images/
+  disable_cudnn: False
+  eps: 1e-06
+  epsilon: 1e-08
+  exp_dir: /data/ai/xxy/mask_rcnn/maskrcnn_3d/exp
+  exp_id: default
+  fit_short_side: False
+  flip: 0.5
+  full_test: False
+  gpus: [6]
+  heads: {'hm': 16}
+  hide_data_time: False
+  hm_gauss: 2
+  input_h: 224
+  input_w: 224
+  load_model: 
+  lr: 0.001
+  lr_step: [90, 120]
+  metric: acc
+  momentum: 0.0
+  multi_person: False
+  num_epochs: 140
+  num_output: 16
+  num_output_depth: 0
+  num_stacks: 1
+  num_workers: 4
+  output_h: 64
+  output_w: 64
+  print_iter: -1
+  ratio_3d: 0
+  resume: False
+  root_dir: /data/ai/xxy/mask_rcnn/../..
+  rotate: 30
+  save_all_models: False
+  save_dir: /data/ai/xxy/mask_rcnn/maskrcnn_3d/exp/default
+  scale: 0.25
+  task: human2d
+  test: False
+  val_intervals: 5
+  weight_3d: 0
+  weight_decay: 0.0
+  weight_var: 0

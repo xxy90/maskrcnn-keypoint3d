@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="ai@192.168.25.69:22">
+    <serverData>
+      <paths name="ai">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/data/ai/xxy/mask_rcnn" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="ai@192.168.25.69:22">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/data/ai/xxy/mask_rcnn" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
